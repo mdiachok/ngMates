@@ -1,0 +1,38 @@
+h4{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+p {
+  color: #666;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 22px;
+  margin: 0;
+}
+.classic-title {
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  font-weight: 300;
+}
+.classic-title span {
+  padding-bottom: 8px;
+  border-bottom: 1px solid;
+  font-weight: 400;
+}
+.classic-title span {
+  border-bottom-color: #ee3733;
+}
+#contactForm input[type="text"], .email, #contactForm textarea {
+  color: #666fb5;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #eee;
+  outline: none;
+  width: 100%;
+  padding: 7px 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
