@@ -1,0 +1,226 @@
+.main-img {
+  padding: 0px;
+}
+
+img {
+  width: 100%;
+}
+/*styles for about us section*/
+#about {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+.section-title-divider {
+  width: 50px;
+  height: 3px;
+  background: #03C4EB;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#about .about-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 28px;
+  margin-top: 0px;
+}
+
+#about .about-text {
+  line-height: 26px;
+}
+
+/*styles for portfolio section*/
+
+#portfolio {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.big-title h1, .big-title h2 {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+.text-center {
+  margin-bottom: 35px;
+}
+
+#portfolio-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+#portfolio-list li img {
+  width: 100%;
+}
+
+#portfolio-list li .portfolio-item-content {
+  background: rgba(11, 181, 134, 0.9);
+}
+
+#portfolio-list li .portfolio-item-content {
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #050F1E;
+}
+
+#portfolio-list li .more {
+  opacity: 0;
+  display: inline-block;
+  content: "i";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 76px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -40px;
+  height: 80px;
+  width: 80px;
+  color: #fff;
+  background: #000;
+  border: 2px solid #fff;
+}
+
+#portfolio-list li:hover .more {
+  top: 60%;
+  margin-top: 0;
+}
+
+#portfolio-list li:hover .more {
+  opacity: 0.75;
+  top: 50%;
+  margin-top: -40px;
+}
+
+#portfolio-list li:hover .more {
+  opacity: 0.75;
+  top: 60%;
+  margin-top: -40px;
+  border-radius: 50%;
+  margin-top: 0;
+}
+
+#portfolio-list li {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 50%;
+  margin-left: -1px;
+  margin-bottom: -4px;
+  padding: 0;
+  text-align: center;
+}
+
+.full-width-portfolio #portfolio-list li {
+  width: 24.85%;
+}
+
+#portfolio-list li:hover .portfolio-item-content {
+  opacity: 1;
+}
+
+#portfolio-list li .header {
+  display: block;
+  margin: 2% 2% 0%;
+  padding: 4% 0;
+  font-size: 1.8em;
+  line-height: 1.5;
+  font-weight: 300;
+  text-transform: none;
+  color: #fff;
+}
+
+#portfolio-list li .body {
+  display: block;
+  font-size: 1em;
+  color: #fff;
+}
+
+/*styles for our team*/
+
+.team-member {
+  padding: 3px;
+  position: relative;
+}
+
+.team-member.modern .member-photo {
+  position: relative;
+  padding: 0px;
+  border: none;
+}
+
+.team-member .member-photo .member-name {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 2px;
+  background-color: #444;
+  z-index: 9994;
+}
+
+.team-member .member-photo .member-name span {
+  position: absolute;
+  top: 90%;
+  right: 0;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 1px 10px;
+  border-radius: 2px;
+  background-color: #0bb586;
+}
+
+.team-member.modern .member-info {
+  padding: 14px 0;
+}
+
+.team-member.modern .member-photo:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: calc(100% + 1px);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9993;
+}
+
+.team-member.modern:hover .member-photo:after {
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+
+.team-member.modern .member-photo:after {
+  background-color: #0bb586;
+}
