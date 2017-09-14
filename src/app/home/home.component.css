@@ -110,7 +110,7 @@ img {
 /*styles for about us section*/
 #about {
   background: #fff;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .section-title {
@@ -124,7 +124,7 @@ img {
 .section-title-divider {
   width: 50px;
   height: 3px;
-  background: #03C4EB;
+  background: rgba(11, 181, 134, 0.9);
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -145,17 +145,17 @@ img {
   line-height: 26px;
 }
 
+
+@media (max-width: 768px) {
+    #about .about-title {
+      margin-top: 40px;
+    }
+  }
+
 /*styles for portfolio section*/
 
 #portfolio {
-  padding-top: 80px;
   padding-bottom: 80px;
-}
-
-.big-title h1, .big-title h2 {
-  font-size: 26px;
-  line-height: 32px;
-  font-weight: 300;
 }
 
 .text-center {
@@ -171,13 +171,16 @@ img {
 
 #portfolio-list li img {
   width: 100%;
+  -webkit-transition: all 0.75s;
+  -moz-transition: all 0.75s;
+  -ms-transition: all 0.75s;
+  -o-transition: all 0.75s;
+  transition: all 0.75s;
 }
+
 
 #portfolio-list li .portfolio-item-content {
   background: rgba(11, 181, 134, 0.9);
-}
-
-#portfolio-list li .portfolio-item-content {
   opacity: 0;
   -webkit-opacity: 0;
   -moz-opacity: 0;
@@ -187,6 +190,11 @@ img {
   height: 100%;
   width: 100%;
   color: #050F1E;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #portfolio-list li .more {
@@ -206,44 +214,76 @@ img {
   color: #fff;
   background: #000;
   border: 2px solid #fff;
-}
-
-#portfolio-list li:hover .more {
-  top: 60%;
-  margin-top: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
 }
 
 #portfolio-list li:hover .more {
   opacity: 0.75;
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  -o-opacity: .75;
   top: 50%;
-  margin-top: -40px;
+  /*margin-top: -40px;*/
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
 }
 
-#portfolio-list li:hover .more {
-  opacity: 0.75;
-  top: 60%;
-  margin-top: -40px;
-  border-radius: 50%;
-  margin-top: 0;
+#portfolio-list li:hover .more:hover {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  -o-opacity: 1;
+  color: #556270;
+  border-color: #fff;
+  background: #fff;
 }
 
 #portfolio-list li {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  width: 50%;
-  margin-left: -1px;
-  margin-bottom: -4px;
+  /*!*width: 50%;*!*/
+  /*margin-left: -1px;*/
+  /*margin-bottom: -4px;*/
   padding: 0;
   text-align: center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.full-width-portfolio #portfolio-list li {
-  width: 24.85%;
+#portfolio-list .row {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
 }
+
 
 #portfolio-list li:hover .portfolio-item-content {
   opacity: 1;
+  webkit-opacity: 1;
+  -moz-opacity: 1;
+  -o-opacity: 1;
 }
 
 #portfolio-list li .header {
@@ -263,12 +303,56 @@ img {
   color: #fff;
 }
 
+
+
+
+  @media only screen and (max-width: 442px) {
+  #portfolio-list li:hover .more {
+    font-size: 30px;
+    line-height: 48px;
+    left: 57%;
+    height: 50px;
+    width: 50px;
+    top: 52%;
+  }
+
+  #portfolio-list li .header {
+    font-size: 1em;
+  }
+}
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    #portfolio-list li:hover .more {
+      font-size: 30px;
+      line-height: 48px;
+      left: 57%;
+      height: 50px;
+      width: 50px;
+      top:52%;
+    }
+    #portfolio-list li .header {
+      font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+  #portfolio-list li:hover .more {
+    font-size: 27px;
+    line-height: 35px;
+    left: 65%;
+    height: 35px;
+    width: 35px;
+    top: 60%;
+  }
+}
+
 /*styles for our team*/
+
 
 .team-member {
   padding: 3px;
   position: relative;
 }
+
 
 .team-member.modern .member-photo {
   position: relative;
@@ -315,6 +399,10 @@ img {
   top: 0;
   left: 0;
   z-index: 9993;
+  transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
 }
 
 .team-member.modern:hover .member-photo:after {
@@ -326,6 +414,86 @@ img {
 .team-member.modern .member-photo:after {
   background-color: #0bb586;
 }
+/*======Contact form===============*/
+
+#contact {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: 300;
+  color: #666;
+  padding: 60px 0 120px;
+}
+
+.classic-title {
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  font-weight: 300;
+}
+
+.classic-title span {
+  padding-bottom: 8px;
+  border-bottom: 1px solid;
+  font-weight: 400;
+}
+
+.classic-title span {
+  border-bottom-color: #ee3733;
+}
+
+#contactForm input[type="text"], .email, #contactForm textarea {
+  color: #666fb5;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #eee;
+  outline: none;
+  width: 100%;
+  padding: 7px 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ul.icons-list {
+  margin-bottom: 6px;
+}
+
+ul.icons-list li {
+  margin-bottom: 4px;
+}
+
+ul.icons-list li i {
+  color: #ee3733;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.btn-large {
+  font-size: 14px;
+  padding: 9px 22px;
+}
+
+.btn-system {
+  background-color: #ee3733;
+  width: auto;
+  display: inline-block;
+  color: #fff;
+  margin-right: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1) inset;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.btn-system:hover {
+  color: #fff;
+  opacity: 0.8;
+}
 
 /*************** Icons ***************/
 
@@ -333,11 +501,6 @@ img {
 .section {
     padding-top: 80px;
     padding-bottom: 80px;
-}
-
-.service {
-    //padding-top: 80px;
-    //padding-bottom: 60px;
 }
 
 .icon-small {
