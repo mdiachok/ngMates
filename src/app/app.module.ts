@@ -7,7 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
+import { Footer } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
@@ -22,7 +22,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent,
+    Footer,
     HomeComponent,
     NavigationComponent
   ],
