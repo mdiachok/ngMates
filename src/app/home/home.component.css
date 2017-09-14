@@ -3,7 +3,7 @@
 }
 #video {
     position: relative;
-    height: 500px;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -288,7 +288,7 @@ img {
 
 #portfolio-list li .header {
   display: block;
-  margin: 2% 2% 0%;
+  margin: 15% 2% 0%;
   padding: 4% 0;
   font-size: 1.8em;
   line-height: 1.5;
@@ -370,7 +370,7 @@ img {
   padding: 5px 14px;
   border-radius: 2px;
   background-color: #444;
-  z-index: 9994;
+  z-index: 99;
 }
 
 .team-member .member-photo .member-name span {
@@ -937,14 +937,14 @@ strong {
 /* Features Box */
 
 .features .list-icon{
-	margin-bottom: 15px;	
+	margin-bottom: 15px;
 }
 .features .list-icon i{
 	font-size: 4em;
 }
 .features h4{
 	font-size: 18px;
-	margin-top: 2px; 
+	margin-top: 2px;
 	margin-bottom: 10px;
 	font-weight: 600;
 }
@@ -1229,29 +1229,28 @@ strong {
 }
 
 @-webkit-keyframes fadeIn {
-	0% {opacity: 0;}	
+	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
 
 @-moz-keyframes fadeIn {
-	0% {opacity: 0;}	
+	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
 
 @-o-keyframes fadeIn {
-	0% {opacity: 0;}	
+	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
 
 @keyframes fadeIn {
-	0% {opacity: 0;}	
+	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
 
 .fadeIn {
 	-webkit-animation-name: fadeIn;
 	-moz-animation-name: fadeIn;
-	-o-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
 	animation-name: fadeIn;
 }
-
