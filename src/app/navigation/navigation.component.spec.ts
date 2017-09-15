@@ -8,9 +8,9 @@ describe('NavigationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavigationComponent ]
+      declarations: [NavigationComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,11 +19,9 @@ describe('NavigationComponent', () => {
     fixture.detectChanges();
   });
 
-<<<<<<< HEAD
   it('should create', () => {
-=======
-  it('should be created', () => {
->>>>>>> e6806244e886c3bd28969de241cf5ddbd8908404
-    expect(component).toBeTruthy();
+    it('should be created', () => {
+      expect(component).toBeTruthy();
+    });
   });
 });
