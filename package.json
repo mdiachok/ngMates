@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prestart": "ng build --prod && ngc",
+    "prestart": "ng build --prod",
     "start": "ts-node src/server.ts",
     "ng": "ng",
     "build": "ng build",
@@ -21,7 +21,7 @@
     "@angular/http": "^4.2.4",
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
-    "@angular/platform-server": "^5.0.0-beta.7",
+    "@angular/platform-server": "4.3.6",
     "@angular/router": "^4.2.4",
     "@types/express": "^4.0.37",
     "angular-font-awesome": "^2.0.3",
