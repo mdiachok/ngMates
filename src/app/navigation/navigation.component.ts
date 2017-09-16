@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
+
 
 @Component({
   selector: 'app-navigation',
@@ -7,9 +8,66 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  scrolling(event): void {
+    event.preventDefault();
+
+    let getHref: string = event.currentTarget.attributes.href.value;
+    let getElem: any = document.querySelector(getHref);
+    let elemPosition: number;
+    let navHeight: number = document.querySelector('#navigation').clientHeight;
+    let positionTop: number;
+    let step: number;
+
+    let runScrolling: any = setInterval(() => {
+      elemPosition = getElem.offsetTop - navHeight;
+      positionTop = window.pageYOffset;
+
+      if (step >= -2 && step <= 2) {
+        window.scrollTo(0, elemPosition);
+        clearInterval(runScrolling);
+      } else {
+        scrollBy(0, step);
+        step = Math.round((getElem.getBoundingClientRect().top - navHeight) / 10);
+        this.scrolling;
+      }
+    }, 7);
+  }
+
+
+  activeClassArray: string [] = ['#video-block', '#about', '#sills', '#portfolio', '#team', '#contact'];
+  getActiveElements: {activeElem: any; position: number}[];
+
+  @HostListener("window:scroll", [])
+  private onWindowScroll = () => {
+
+    this.getActiveElements = this.activeClassArray.map(function (a) {
+      let elem: any = document.querySelector(a);
+      let activeElem = document.querySelector(`a[href="${a}"]`);
+      let position: number = elem.offsetTop;
+      return {activeElem, position}
+    });
+
+    let positionTop: number = window.pageYOffset + 78;
+    if (this.getActiveElements[0].position > positionTop) {
+      let home = document.querySelector('a[href="#top"]');
+      home.classList.add('active');
+    } else {
+      this.getActiveElements.forEach(function (item, index, array) {
+        if (positionTop >= item.position) {
+          array.forEach(function (deactive) {
+            deactive.activeElem.classList.remove('active');
+          });
+          item.activeElem.classList.add('active');
+        }
+      })
+    }
+  };
+
+  constructor() {
+  }
 
   ngOnInit() {
+
   }
 
 }
