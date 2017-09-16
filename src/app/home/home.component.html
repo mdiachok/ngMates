@@ -6,18 +6,15 @@
         <video id="my-video" width="320" height="240" loop autoplay muted plays-inline>
           <source [src]="mainVideo" type="video/mp4">
         </video>
-        <!--<div class="content Iam">
-          <h1>Welcome to ngMate</h1>
-          <p>We build </p>
-          <b>
-          <span class="innerIam">
-          interactive and<br />
-          beautiful graphics<br />
-          functional websites<br />
-          working mobile apps<br />
-          </span>
-          </b>
-        </div>-->
+        <div class="text-video">
+          <h2 class="animated2">
+            <span>Welcome to <strong>Margo</strong></span>
+          </h2>
+          <h3 class="animated3">
+             <span>Organizing impact on urban innovation</span>
+          </h3>
+        </div>
+      
       </div>
     </div>
   </div>
@@ -62,7 +59,7 @@
 <!--about us section end-->
 
 <!-- Start Services Section -->
-<div class="section service">
+<div class="section service" id="sills">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -311,7 +308,7 @@
 
 <!--our team section start-->
 
-<div id="about-us" class="section">
+<div id="team" class="section">
   <div class="container">
     <div class="text-center">
       <h1 class="section-title">Our Great Team</h1>
@@ -445,8 +442,8 @@
             </div>
           </div>
           <button type="submit" id="submit" class="btn-system btn-large" [disabled]="!f.valid">Send</button>
-          <div id="msgSubmit" class="h3 text-center hidden" *ngIf="!f.valid && f.submitted">
-            <h1>Did you fill in the form properly?</h1>
+          <div id="msgSubmit" class="h3 text-center" [style.display]="f.submitted ? 'block' : 'none'">
+            <h1>Message has been sent</h1>
           </div>
           <div class="clearfix"></div>
         </form>
@@ -489,7 +486,3 @@
 </div>
 
 <!--============team section end=========-->
-
-
-
-

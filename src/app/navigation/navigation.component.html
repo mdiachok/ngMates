@@ -1,5 +1,5 @@
 <!-- Start Header Section -->
-<header class="clearfix">
+<header class="clearfix fixed-header">
 
   <!-- Start  Logo & Naviagtion  -->
   <div id="navigation" class="navbar navbar-default navbar-top" role="navigation" data-spy="affix" data-offset-top="50">
@@ -10,7 +10,7 @@
           <i class="fa fa-bars"></i>
         </button>
         <!-- End Toggle Nav Link For Mobiles -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#top" (click)="scrolling($event)">
           <img alt="logo" src="../../assets/margo.png">
         </a>
       </div>
@@ -18,18 +18,21 @@
         <!-- Start Navigation List -->
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a class="active" href="">Home</a>
+            <a href="#video-block" (click)="scrolling($event)" class="active">Home</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="#about" (click)="scrolling($event)">About</a>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <a href="#sills" (click)="scrolling($event)">Sills</a>
           </li>
           <li>
-            <a href="#">Skills</a>
+            <a href="#portfolio" (click)="scrolling($event)">Portfolio</a>
           </li>
-          <li><a href="#">Contact</a>
+          <li>
+            <a href="#team" (click)="scrolling($event)">Team</a>
+          </li>
+          <li><a href="#contact" (click)="scrolling($event)">Contact</a>
           </li>
         </ul>
         <!-- End Navigation List -->
