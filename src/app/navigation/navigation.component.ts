@@ -14,20 +14,19 @@ export class NavigationComponent implements OnInit {
     let getHref: string = event.currentTarget.attributes.href.value;
     let getElem: any = document.querySelector(getHref);
     let elemPosition: number;
-    let navHeight: number = document.querySelector('#navigation').clientHeight;
     let positionTop: number;
     let step: number;
 
     let runScrolling: any = setInterval(() => {
-      elemPosition = getElem.offsetTop - navHeight;
+      elemPosition = getElem.offsetTop;
       positionTop = window.pageYOffset;
 
-      if (step >= -2 && step <= 2) {
+      if (step >= -10 && step <= 10) {
         window.scrollTo(0, elemPosition);
         clearInterval(runScrolling);
       } else {
-        scrollBy(0, step);
-        step = Math.round((getElem.getBoundingClientRect().top - navHeight) / 10);
+        scrollBy(0, step/10);
+        step = Math.round(getElem.getBoundingClientRect().top);
         this.scrolling;
       }
     }, 7);

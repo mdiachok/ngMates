@@ -132,7 +132,7 @@ img {
 /*styles for about us section*/
 #about {
   background: #fff;
-  padding: 40px 0;
+  padding: 55px 0 40px;
 }
 
 .section-title {
@@ -177,6 +177,7 @@ img {
 /*styles for portfolio section*/
 
 #portfolio {
+  padding-top: 75px;
   padding-bottom: 80px;
 }
 
@@ -444,7 +445,7 @@ img {
   line-height: 21px;
   font-weight: 300;
   color: #666;
-  padding: 60px 0 120px;
+  padding: 75px 0 120px;
 }
 
 .classic-title {
