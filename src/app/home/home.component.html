@@ -386,7 +386,7 @@
         <h4 class="classic-title"><span>Contact Us</span></h4>
 
         <!-- Start Contact Form -->
-        <form role="form" id="contactForm" data-toggle="validator" class="shake"  #f="ngForm">
+        <form role="form" id="contactForm" data-toggle="validator" class="shake" (ngSubmit)="onSubmit(f)" #f="ngForm">
           <div class="form-group">
             <div class="controls">
               <input

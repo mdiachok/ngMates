@@ -13,8 +13,6 @@ enableProdMode();
 
 const app = express();
 
-// global.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-
 let template = readFileSync(join(__dirname, '..', 'dist', 'index.html')).toString();
 
 app.engine('html', (_, options, callback) => {
