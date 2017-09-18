@@ -14,22 +14,21 @@ export class Footer implements OnInit {
 
     let getHref: string = event.currentTarget.attributes.href.value;
     let getElem: any = document.querySelector(getHref);
-    let elemPosition: number = getElem.offsetTop;
+    let elemPosition: number;
+    let navHeight: number = document.querySelector('#navigation').clientHeight;
     let positionTop: number;
     let step: number;
 
     let runScrolling: any = setInterval(() => {
+      elemPosition = getElem.offsetTop - navHeight;
       positionTop = window.pageYOffset;
-      step = Math.round(getElem.getBoundingClientRect().top/15);
 
-      if (step > -1 && step < 1) {
-        positionTop = elemPosition;
+      if (step >= -2 && step <= 2) {
+        window.scrollTo(0, elemPosition);
         clearInterval(runScrolling);
-      } else if (positionTop > elemPosition) {
+      } else {
         scrollBy(0, step);
-        this.scrollUp;
-      } else if (positionTop < elemPosition) {
-        scrollBy(0, step);
+        step = Math.round((getElem.getBoundingClientRect().top - navHeight) / 10);
         this.scrollUp;
       }
     }, 7);

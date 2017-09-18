@@ -164,16 +164,6 @@ a, a:hover {
   margin-left: 0;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .flickr-widget ul li:nth-child(3n+1) {
-    margin-left: 8px;
-  }
-
-  .flickr-widget h4 {
-    margin-left: 8px;
-  }
-}
-
 .flickr-widget ul li a {
   display: inline-block;
   width: 80px;
@@ -272,4 +262,13 @@ ul.footer-nav li {
 .back-to-top:hover i {
   background-color: #ee3733;
   z-index: 100;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .flickr-widget ul li:nth-child(3n+1) {
+    margin-left: 8px;
+  }
+
+  .flickr-widget h4 {
+    margin-left: 8px;
+  }
 }
