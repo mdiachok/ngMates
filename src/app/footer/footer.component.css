@@ -33,7 +33,7 @@ ul {
 
 footer {
   background-color: #222;
-  padding-top: 60px;
+  /*padding-top: 60px;*/
   border-top: 4px solid #555;
   color: #ccc;
 }
@@ -199,12 +199,13 @@ img {
   padding: 15px 0;
   font-size: 11px;
   letter-spacing: 0.5px;
-  border-top: 1px solid rgba(255, 255, 255, .06);
+  /*border-top: 1px solid rgba(255, 255, 255, .06);*/
+  text-align: center;
 }
 
 .copyright-section p {
   font-size: 11px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .copyright-section p a {
