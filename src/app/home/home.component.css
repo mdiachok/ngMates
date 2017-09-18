@@ -25,14 +25,15 @@
 .text-video h2 {
     font-size: 60px;
     font-weight: 100;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     color: black;
+    text-align: center;
 }
 .text-video h3 {
     font-size: 35px;
     font-weight: 300;
     margin-top: 60px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     text-align: center;
     color: black;
 }
@@ -136,7 +137,7 @@ img {
 
 .section-title {
   font-size: 32px;
-  color: #111;
+  color: #555;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -475,8 +476,10 @@ img {
   margin-bottom: 10px;
 }
 
-.ul.icons-list {
+ul.icons-list {
   margin-bottom: 6px;
+  padding: 0;
+  list-style: none;
 }
 
 ul.icons-list li {
@@ -1015,7 +1018,7 @@ strong {
 .image-service-box h4 {
 	margin-bottom: 8px;
 	padding: 0 10px;
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .image-service-box p {
@@ -1052,7 +1055,7 @@ strong {
 
 .service-center .service-content h4 {
 	margin-bottom: 6px;
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .service-center .service-icon i {
@@ -1274,4 +1277,12 @@ strong {
 	-moz-animation-name: fadeIn;
   -o-animation-name: fadeIn;
 	animation-name: fadeIn;
+}
+
+.text-video h2{
+  color: #555;
+}
+
+.text-video h3 {
+  color: #ee3733;
 }
