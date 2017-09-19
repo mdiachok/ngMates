@@ -92,7 +92,6 @@ button.navbar-toggle:hover i:before {
 .navbar-default .navbar-nav > li > a {
   color: #999;
   display: block;
-  font-size: 14px;
   font-weight: 300;
   padding: 28px 15px 28px 15px;
   overflow: hidden;
