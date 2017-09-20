@@ -19,7 +19,7 @@
 .text-video {
 	position: relative;
 	z-index: 5;
-	padding: 170px 0;
+	padding: 200px 0;
 }
 
 .text-video h2 {
@@ -1282,8 +1282,10 @@ strong {
 
 .text-video h2{
   color: #555;
+  text-shadow: 4px 2px 6px rgba(22, 22, 22, 1);
 }
 
 .text-video h3 {
   color: #ee3733;
+  text-shadow: 4px 2px 6px rgba(22, 22, 22, 1);
 }
