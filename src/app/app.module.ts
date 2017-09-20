@@ -11,11 +11,11 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyD_sTFYkaGZu79yUnrsLvvvigaFJwcNN5Q",
-  authDomain: "test-work-12a17.firebaseapp.com",
-  databaseURL: "https://test-work-12a17.firebaseio.com",
-  storageBucket: "test-work-12a17.appspot.com",
-  messagingSenderId: "289641279368"
+  apiKey: 'AIzaSyD_sTFYkaGZu79yUnrsLvvvigaFJwcNN5Q',
+  authDomain: 'test-work-12a17.firebaseapp.com',
+  databaseURL: 'https://test-work-12a17.firebaseio.com',
+  storageBucket: 'test-work-12a17.appspot.com',
+  messagingSenderId: '289641279368'
 };
 
 @NgModule({
@@ -26,7 +26,7 @@ export const firebaseConfig = {
     NavigationComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: '3DSL'}),
+    BrowserModule.withServerTransition({appId: 'landing3-dsl'}),
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
