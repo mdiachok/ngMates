@@ -29,7 +29,9 @@ export class NavigationComponent implements OnInit {
         clearInterval(runScrolling);
       } else {
         scrollBy(0, step/10);
+        step = Math.round(getElem.getBoundingClientRect().top);
         this.scrolling;
+        
       }
     }, 7);
   }
