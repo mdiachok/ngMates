@@ -11,11 +11,12 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyD_sTFYkaGZu79yUnrsLvvvigaFJwcNN5Q',
-  authDomain: 'test-work-12a17.firebaseapp.com',
-  databaseURL: 'https://test-work-12a17.firebaseio.com',
-  storageBucket: 'test-work-12a17.appspot.com',
-  messagingSenderId: '289641279368'
+  apiKey: "AIzaSyABKjpHd7u2JyXPlgn9gtswliKh5fB59x4",
+  authDomain: "hobbit-3c587.firebaseapp.com",
+  databaseURL: "https://hobbit-3c587.firebaseio.com",
+  projectId: "hobbit-3c587",
+  storageBucket: "hobbit-3c587.appspot.com",
+  messagingSenderId: "688486551372"
 };
 
 @NgModule({
