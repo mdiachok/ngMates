@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
 
   mainImg: string;
   mainVideo: string;
+  showSuccessAlert = false;
 
   items: FirebaseListObservable<any[]>;
   msgVal = '';
@@ -33,11 +34,16 @@ export class HomeComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.Send(form.value);
-    form.reset();
-    console.log(name)
+    this.showSuccessAlert = true;
+    setTimeout(() => { this.showSuccessAlert = false}, 2000);
   }
 
-  ngOnInit() {
-  }
+
+ ngOnInit() {
+
+ }
+
+
+
 }
 

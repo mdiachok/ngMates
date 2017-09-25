@@ -521,6 +521,22 @@ strong {
   opacity: 0.8;
 }
 
+.modal-window {
+  position: fixed;
+  top: 10%;
+  width: 94vw;
+  text-align: center;
+
+}
+
+.modal-content {
+  background: rgba(11, 181, 134, 0.9);
+}
+
+.modal-header {
+  border: none;
+}
+
 /*************** Icons ***************/
 
 

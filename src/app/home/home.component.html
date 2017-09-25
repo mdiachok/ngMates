@@ -332,11 +332,7 @@
     <div class="row">
       <div class="col-md-8">
 
-        <!-- Classic Heading -->
-        <h4 class="classic-title"><span>Contact Us</span></h4>
-
-        <!-- Start Contact Form -->
-        <form role="form" id="contactForm" data-toggle="validator" class="shake" (ngSubmit)="onSubmit(f)" #f="ngForm">
+       <h4 class="classic-title"><span>Contact Us</span></h4><form role="form" id="contactForm" data-toggle="validator" class="shake" (ngSubmit)="onSubmit(f)" #f="ngForm">
           <div class="form-group">
             <div class="controls">
               <input
@@ -395,12 +391,23 @@
             </div>
           </div>
           <button type="submit" id="submit" class="btn-system btn-large" [disabled]="!f.valid">Send</button>
-          <div id="msgSubmit" class="h3 text-center" [style.display]="f.submitted ? 'block' : 'none'">
-            <h1>Message has been sent</h1>
-          </div>
+          <!--<div id="msgSubmit" class="h3 text-center" [style.display]="f.submitted ? 'block' : 'none'">-->
+            <!--<h1>Message has been sent</h1>-->
+          <!--</div>-->
           <div class="clearfix"></div>
         </form>
-        <!-- End Contact Form -->
+        <div class="modal-window" *ngIf="showSuccessAlert">
+            <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Your message has been sent. We will contact you soon :)</h4>
+          </div>
+        </div>
+
+        </div>
+
+
+
+
 
       </div>
       <div class="col-md-4">
