@@ -31,13 +31,13 @@ export class NavigationComponent implements OnInit {
         scrollBy(0, step/10);
         step = Math.round(getElem.getBoundingClientRect().top);
         this.scrolling;
-        
+
       }
     }, 7);
   }
 
 
-  activeClassArray: string [] = ['#video-block', '#about', '#sills', '#portfolio', '#team', '#contact'];
+  activeClassArray: string [] = ['#video-block', '#about', '#skills', '#portfolio', '#team', '#contact'];
   getActiveElements: {activeElem: any; position: number}[];
 
   @HostListener("window:scroll", [])
