@@ -79,10 +79,6 @@
   "defaults": {
     "styleExt": "css",
     "component": {}
-  },
-    "defaults": {
-    "styleExt": "css",
-    "component": {}
   }
 }
 
