@@ -36,8 +36,10 @@ export class HomeComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.Send(form.value);
+    form.reset();
     this.showSuccessAlert = true;
-    setTimeout(() => { this.showSuccessAlert = false}, 3500);
+    setTimeout(() => { this.showSuccessAlert = false }, 3500);
+
   }
 
 
