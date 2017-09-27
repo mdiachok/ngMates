@@ -3,9 +3,12 @@
   <div class="row">
     <div class="col-lg-12" id="video-block">
       <div id="video">
-        <video id="my-video" width="320" height="240" loop autoplay muted plays-inline>
-          <source [src]="mainVideo" type="video/mp4">
+        <video *ngIf="innerWidth > 425"  id="my-video" loop autoplay muted plays-inline>
+          <source [src]="mainVideo" async type="video/mp4">
         </video>
+        <div class="mobileImg" *ngIf="innerWidth < 426">
+          <img src="../../assets/images/office.jpg" alt="office" class="img-responsive">
+        </div>
         <div class="text-video">
           <h2 class="animated2">
             <span>Welcome to <span style="color: #ee3733"><strong>ngMates</strong></span></span>
