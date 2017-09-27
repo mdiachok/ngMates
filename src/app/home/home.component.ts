@@ -8,6 +8,7 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  innerWidth: any;
 
   mainImg: string;
   mainVideo: string;
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
     this.mainImg = '../assets/images/main-img.jpg';
     this.mainVideo = '../assets/media/office.mp4';
 
+    this.innerWidth = (window.screen.width);
       this.items = af.list('/messages', {
         query: {
           limitToLast: 50

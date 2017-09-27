@@ -30,7 +30,7 @@ export class Footer implements OnInit {
         step = Math.round(getElem.getBoundingClientRect().top);
         this.scrollUp;
       }
-    }, 7);
+    }, 5);
   }
 
   constructor() {

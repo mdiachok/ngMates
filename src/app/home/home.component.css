@@ -7,13 +7,17 @@
     overflow: hidden;
 }
 
-#my-video {
+#my-video, .mobileImg {
     position: absolute;
     z-index: 1;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
+}
+
+.mobileImg{
+	min-height: 100vh;
 }
 
 .text-video {
