@@ -1282,10 +1282,10 @@ strong {
 
 .text-video h2{
   color: #555;
-  text-shadow: 4px 2px 6px rgba(22, 22, 22, 1);
+  text-shadow: 0px 2px 8px rgba(22, 22, 22, 1);
 }
 
 .text-video h3 {
   color: #ee3733;
-  text-shadow: 4px 2px 6px rgba(22, 22, 22, 1);
+  text-shadow: 0px 2px 8px rgba(22, 22, 22, 1);
 }
