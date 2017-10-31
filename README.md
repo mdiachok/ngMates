@@ -1,5 +1,14 @@
-kmetVO
-# Landing3DSL
+To deploy project using firebase you need:
+1) git pull from master
+2) change firebase config
+3) npm install
+4) cd functions
+5) npm install
+6) cd ..
+7) ng build -prod
+8) move /dist to /functions
+9) ng build -aot -app ssr
+10) firebase deploy
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 

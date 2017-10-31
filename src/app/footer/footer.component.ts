@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   moduleId: module.id,
@@ -30,10 +30,17 @@ export class Footer implements OnInit {
         step = Math.round(getElem.getBoundingClientRect().top);
         this.scrollUp;
       }
-    }, 7);
+    }, 5);
   }
 
-  constructor() {
+  constructor(meta: Meta, title: Title) {
+    title.setTitle('NgMates');
+
+    meta.addTags([
+      { name: 'author',   content: 'ngmates.com'},
+      { name: 'keywords', content: 'angular seo, angular 4 universal, angular firebase'},
+      { name: 'description', content: 'This is our Angular SEO-based App, enjoy it!' }
+    ]);
   }
 
 

@@ -5,7 +5,6 @@
   },
   "apps": [
     {
-
       "root": "src",
       "outDir": "dist",
       "assets": [
@@ -33,6 +32,24 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
+    },
+    {
+      "name": "ssr",
+      "root": "src",
+      "outDir": "functions/dist-ssr",
+      "assets": ["assets", "favicon.ico"],
+      "index": "index.html",
+      "main": "server.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.server.json",
+      "prefix": "app",
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      },
+      "platform": "server"
     }
   ],
   "e2e": {
@@ -60,10 +77,6 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
-  },
-    "defaults": {
     "styleExt": "css",
     "component": {}
   }

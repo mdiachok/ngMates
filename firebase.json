@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "public": "functions/dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "ssr"
+      }
+    ]
+  },
+  "database": {
+    "rules": "database.rules.json"
+  }
+}

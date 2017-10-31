@@ -1,5 +1,7 @@
 import {Component, OnInit, HostListener} from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
+let runScrolling: any;
 
 @Component({
   selector: 'app-navigation',
@@ -11,13 +13,15 @@ export class NavigationComponent implements OnInit {
   scrolling(event): void {
     event.preventDefault();
 
+    clearInterval(runScrolling);
+
     let getHref: string = event.currentTarget.attributes.href.value;
     let getElem: any = document.querySelector(getHref);
     let elemPosition: number;
     let positionTop: number;
     let step: number;
 
-    let runScrolling: any = setInterval(() => {
+    runScrolling = setInterval(() => {
       elemPosition = getElem.offsetTop;
       positionTop = window.pageYOffset;
 
@@ -28,12 +32,13 @@ export class NavigationComponent implements OnInit {
         scrollBy(0, step/10);
         step = Math.round(getElem.getBoundingClientRect().top);
         this.scrolling;
+
       }
     }, 7);
   }
 
 
-  activeClassArray: string [] = ['#video-block', '#about', '#sills', '#portfolio', '#team', '#contact'];
+  activeClassArray: string [] = ['#video-block', '#about', '#skills', '#portfolio', '#team', '#contact'];
   getActiveElements: {activeElem: any; position: number}[];
 
   @HostListener("window:scroll", [])
@@ -62,7 +67,14 @@ export class NavigationComponent implements OnInit {
     }
   };
 
-  constructor() {
+  constructor(meta: Meta, title: Title) {
+    title.setTitle('NgMates');
+
+    meta.addTags([
+      { name: 'author',   content: 'ngmates.com'},
+      { name: 'keywords', content: 'angular seo, angular 4 universal, angular firebase'},
+      { name: 'description', content: 'This is our Angular SEO-based App, enjoy it!' }
+    ]);
   }
 
   ngOnInit() {

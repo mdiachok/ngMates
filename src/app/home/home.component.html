@@ -3,9 +3,12 @@
   <div class="row">
     <div class="col-lg-12" id="video-block">
       <div id="video">
-        <video id="my-video" width="320" height="240" loop autoplay muted plays-inline>
-          <source [src]="mainVideo" type="video/mp4">
+        <video *ngIf="innerWidth > 450"  id="my-video" loop autoplay muted plays-inline>
+          <source [src]="mainVideo" async type="video/mp4">
         </video>
+        <div class="mobileImg" *ngIf="innerWidth < 450">
+          <img src="../../assets/images/office.jpg" alt="office" class="img-responsive">
+        </div>
         <div class="text-video">
           <h2 class="animated2">
             <span>Welcome to <span style="color: #ee3733"><strong>ngMates</strong></span></span>
@@ -14,7 +17,6 @@
             <span><strong>We provide good solutions to your business</strong></span>
           </h3>
         </div>
-
       </div>
     </div>
   </div>
@@ -30,35 +32,53 @@
           <h3 class="section-title">About Us</h3>
         </div>
         <div class="section-title-divider"></div>
-        <h4 class="section-description">NgMates is a forward thinking company. We find creative solutions that move concepts into the future for our clients</h4>
+        <h4 class="section-description">NgMates is focused on Angular technology that fits all needs of our customers</h4>
       </div>
     </div>
   </div>
   <div class="container about-container wow" >
     <div class="row">
       <div class="col-md-6 about-img">
-        <img class="img-responsive" src="../../assets/images/about-us.jpg" alt="">
+        <img class="img-responsive" src="../../assets/images/about_gif.gif" alt="about-icon">
       </div>
 
       <div class="col-md-6 about-content">
         <!--<h2 class="about-title text-center">We provide great services and ideas</h2>-->
         <p class="about-text">
-          NgMates is a professional programing company based in Ukraine. We supply services of web design & development and provides end-to-end service
-          for web and mobile application development & deployment. Our company works on a wide range of technologies ranging from open source to proprietary and
-          custom built solutions, to deliver full spectrum of modern services to our customers globally.</p>
+          We are a young and prospective company, that's why we care about all of our customers.
+          Our Product Managers have expertise in a wide range of industries including Consumer Electronics, E-commerce, Sports & E-sports,
+          HoReCa and more to consult you for the best solutions your business need. We are focused on small and middle-sized businesses and provide
+          a different type of services, from regular Landing Pages with configured SEO to complex 100+ pages using edge technologies. You will be surprised
+          with price range we offer, that is possible because we already have frameworks to speed up our development.
+        </p>
         <p class="about-text">
-          The main feature of us is to take our job very seriously and believe that we can make a meaningful difference in making your
-          product or service leap forward and gain the respect it deserves through a creative and well structured process.</p>
+          We are always focused on your needs, that's why our works are so good
+        </p>
         <p class="about-text">
-          We build dynamic web applications, websites and online software using fantastic technology framework like ANGULAR. We believe that Angular is
-          one solution for all devices. And we know how to do that in a good way.</p>
+          In partnering with
+          <a href="https://www.meetup.com/Angular-Lviv/">Angular Meetup Lviv</a>
+          <img src="../../assets/images/angular-logo.png" alt="angular-logo">
+        </p>
     </div>
   </div>
 </div>
 <!--about us section end-->
 
+  <!--why angular start-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-center">
+        <h3 class="section-title">Why angular?</h3>
+      </div>
+      <div class="section-title-divider"></div>
+      <h4 class="section-description">Angular has many features that allow us to configure apps to be as fast and high preforming as possible</h4>
+    </div>
+  </div>
+  <app-wangular></app-wangular>
+  <!--why angular end-->
+
 <!-- Start Services Section -->
-<div class="section service" id="sills">
+<div class="section service" id="skills">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -91,7 +111,7 @@
           <i class="fa fa-desktop icon-large"></i>
         </div>
         <div class="service-content">
-          <h4>Angular Web App Development Services</h4>
+          <h4>Angular Web Development</h4>
         </div>
       </div>
       <!-- End Service Icon 2 -->
@@ -102,7 +122,7 @@
           <i class="fa fa-eye icon-large"></i>
         </div>
         <div class="service-content">
-          <h4>Angular Mobile App Development</h4>
+          <h4>UX/UI Design for all Devices</h4>
         </div>
       </div>
       <!-- End Service Icon 3 -->
@@ -113,7 +133,7 @@
           <i class="fa fa-code icon-large"></i>
         </div>
         <div class="service-content">
-          <h4>Enterprise App Development</h4>
+          <h4>Software Integration</h4>
         </div>
       </div>
       <!-- End Service Icon 4 -->
@@ -127,7 +147,7 @@
           <i class="fa fa-rocket icon-large"></i>
         </div>
         <div class="service-content">
-          <h4>Angular Development for Small Business</h4>
+          <h4>SEO and Growth Support</h4>
         </div>
       </div>
       <!-- End Service Icon 5 -->
@@ -135,7 +155,7 @@
       <!-- Start Service Icon 6 -->
       <div class="col-md-3 col-sm-6 col-lg-3 service-box service-center animated fadeIn delay-06" data-animation="fadeIn" data-animation-delay="06">
         <div class="service-icon">
-          <i class="fa fa-download icon-large"></i>
+          <i class="fa fa-tablet icon-large"></i>
         </div>
         <div class="service-content">
           <h4>Angular Cross Platform Development</h4>
@@ -146,10 +166,10 @@
       <!-- Start Service Icon 7 -->
       <div class="col-md-3 col-sm-6 col-lg-3 service-box service-center animated fadeIn delay-07" data-animation="fadeIn" data-animation-delay="07">
         <div class="service-icon">
-          <i class="fa fa-css3 icon-large"></i>
+          <i class="fa fa-server icon-large"></i>
         </div>
         <div class="service-content">
-          <h4>Adaptive, responsive development</h4>
+          <h4>Domain and Hosting</h4>
         </div>
       </div>
       <!-- End Service Icon 7 -->
@@ -159,7 +179,7 @@
           <i class="fa fa-umbrella icon-large"></i>
         </div>
         <div class="service-content">
-          <h4>Support, Maintenance & Optimisation</h4>
+          <h4>Support & Maintenance</h4>
         </div>
       </div>
       <!-- End Service Icon 8 -->
@@ -177,10 +197,10 @@
 
   <!-- Start Big Heading -->
   <div class="text-center">
-    <h1 class="section-title">This is Our Latest Work </h1>
+    <h1 class="section-title">These are Our Latest Works</h1>
   </div>
   <div class="section-title-divider"></div>
-  <h4 class="section-description">We have made considerable steps towards achieving our aim of becoming one of the best IT company in the world</h4>
+  <h4 class="section-description">We listen our clients - that's why the result is always good</h4>
   <ul id="portfolio-list" class="container-fluid">
     <div class="row">
       <li class="col-md-3 col-xs-6">
@@ -189,7 +209,7 @@
           <span class="header">PYTT Living</span>
           <p class="body">web develpment, design</p>
         </div>
-        <a href="https://pytt-living.com/" target="_blank"><i class="more">+</i></a>
+        <a href="https://pytt-living.com/" target="_blank"><i class="more">View</i></a>
 
       </li>
       <li class="col-md-3 col-xs-6">
@@ -198,7 +218,7 @@
           <span class="header">JoinUp Lviv</span>
           <p class="body">web develpment, design</p>
         </div>
-        <a href="http://joinuplviv.com/" target="_blank"><i class="more">+</i></a>
+        <a href="http://joinuplviv.com/" target="_blank"><i class="more">View</i></a>
 
       </li>
       <li class="col-md-3 col-xs-6">
@@ -207,7 +227,7 @@
           <span class="header">Leading Minds</span>
           <p class="body">web develpment, design</p>
         </div>
-        <a href="http://leadingminds.co/" target="_blank"><i class="more">+</i></a>
+        <a href="http://leadingminds.co/" target="_blank"><i class="more">View</i></a>
 
       </li>
       <li class="col-md-3 col-xs-6">
@@ -216,7 +236,7 @@
           <span class="header">NetworkTables</span>
           <p class="body">web develpment, design</p>
         </div>
-        <a href="http://www.networktables.com/homeA/" target="_blank"><i class="more">+</i></a>
+        <a href="http://www.networktables.com/homeA/" target="_blank"><i class="more">View</i></a>
       </li>
     </div>
     <div class="row">
@@ -226,7 +246,7 @@
           <span class="header">Lofting.co</span>
           <p class="body">web develpment, design</p>
         </div>
-        <a href="http://concept.lofting.co/" target="_blank"><i class="more">+</i></a>
+        <a href="http://concept.lofting.co/" target="_blank"><i class="more">View</i></a>
 
       </li>
       <li class="col-md-3 col-xs-6">
@@ -235,61 +255,24 @@
           <span class="header">Api PRO</span>
           <p class="body">web develpment, design</p>
         </div>
-        <a href="http://www.apipro.com/" target="_blank"><i class="more">+</i></a>
+        <a href="http://www.apipro.com/" target="_blank"><i class="more">View</i></a>
 
       </li>
       <li class="col-md-3 col-xs-6">
-        <img src="../../assets/images/portfolio-2.png" class="img-responsive" alt="">
+        <img src="../../assets/images/language-school.jpg" class="img-responsive" alt="">
         <div class="portfolio-item-content">
-          <span class="header">Portfolio</span>
+          <span class="header">Language School</span>
           <p class="body">web develpment, design</p>
         </div>
-        <a href="http://portfolio-oksana.esy.es/" target="_blank"><i class="more">+</i></a>
+        <a href="http://linguist.lviv.ua/" target="_blank"><i class="more">View</i></a>
       </li>
       <li class="col-md-3 col-xs-6">
-        <img src="../../assets/images/portfolio-1.png" class="img-responsive" alt="">
+        <img src="../../assets/images/lenovo.jpg" class="img-responsive" alt="">
         <div class="portfolio-item-content">
-          <span class="header">Monocle issue 69</span>
+          <span class="header">Lenovo</span>
           <p class="body">web develpment, design</p>
         </div>
-        <a href="#" target="_blank"><i class="more">+</i></a>
-      </li>
-    </div>
-    <div class="row">
-      <li class="col-md-3 col-xs-6">
-        <img src="../../assets/images/portfolio-1.png" class="img-responsive" alt="">
-        <div class="portfolio-item-content">
-          <span class="header">Monocle issue 69</span>
-          <p class="body">web develpment, design</p>
-        </div>
-        <a href="#" target="_blank"><i class="more">+</i></a>
-
-      </li>
-      <li class="col-md-3 col-xs-6">
-        <img src="../../assets/images/portfolio-2.png" class="img-responsive" alt="">
-        <div class="portfolio-item-content">
-          <span class="header">Monocle issue 69</span>
-          <p class="body">web develpment, design</p>
-        </div>
-        <a href="#" target="_blank"><i class="more">+</i></a>
-
-      </li>
-      <li class="col-md-3 col-xs-6">
-        <img src="../../assets/images/portfolio-3.png" class="img-responsive" alt="">
-        <div class="portfolio-item-content">
-          <span class="header">Monocle issue 69</span>
-          <p class="body">web develpment, design</p>
-        </div>
-        <a href="#" target="_blank"><i class="more">+</i></a>
-
-      </li>
-      <li class="col-md-3 col-xs-6">
-        <img src="../../assets/images/portfolio-4.png" class="img-responsive" alt="">
-        <div class="portfolio-item-content">
-          <span class="header">Monocle issue 69</span>
-          <p class="body">web develpment, design</p>
-        </div>
-        <a href="#" target="_blank"><i class="more">+</i></a>
+        <a href="https://genyklemberg.github.io/L-files/public/" target="_blank"><i class="more">View</i></a>
       </li>
     </div>
   </ul>
@@ -297,14 +280,13 @@
 <!--portfolio section end-->
 
 <!--our team section start-->
-
 <div id="team" class="section">
   <div class="container">
     <div class="text-center">
       <h1 class="section-title">Our Great Team</h1>
     </div>
     <div class="section-title-divider"></div>
-    <h4 class="section-description">Our resources are professional and experts in latest mobile app development technologies</h4>
+    <h4 class="section-description">We do what we love and we hope you'll love it too</h4>
     <div class="row">
       <div class="col-md-2 col-sm-6 col-xs-12 col-md-offset-1 animated fadeIn delay-03" data-animation="fadeIn" data-animation-delay="05">
         <div class="team-member modern">
@@ -359,6 +341,7 @@
     </div>
   </div>
 </div>
+
 <!-- Start Contact Form -->
 <div id="contact">
   <div class="text-center">
@@ -371,11 +354,7 @@
     <div class="row">
       <div class="col-md-8">
 
-        <!-- Classic Heading -->
-        <h4 class="classic-title"><span>Contact Us</span></h4>
-
-        <!-- Start Contact Form -->
-        <form role="form" id="contactForm" data-toggle="validator" class="shake" (ngSubmit)="onSubmit(f)" #f="ngForm">
+       <h4 class="classic-title"><span>Contact Us</span></h4><form role="form" id="contactForm" data-toggle="validator" class="shake" (ngSubmit)="onSubmit(f)" #f="ngForm">
           <div class="form-group">
             <div class="controls">
               <input
@@ -434,13 +413,18 @@
             </div>
           </div>
           <button type="submit" id="submit" class="btn-system btn-large" [disabled]="!f.valid">Send</button>
-          <div id="msgSubmit" class="h3 text-center" [style.display]="f.submitted ? 'block' : 'none'">
-            <h1>Message has been sent</h1>
-          </div>
+          <!--<div id="msgSubmit" class="h3 text-center" [style.display]="f.submitted ? 'block' : 'none'">-->
+            <!--<h1>Message has been sent</h1>-->
+          <!--</div>-->
           <div class="clearfix"></div>
         </form>
-        <!-- End Contact Form -->
-
+        <div class="modal-window" *ngIf="showSuccessAlert">
+            <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title">Your message has been sent. We will contact you soon :)</p>
+          </div>
+        </div>
+        </div>
       </div>
       <div class="col-md-4">
 
@@ -452,9 +436,9 @@
 
         <!-- Info - Icons List -->
         <ul class="icons-list">
-          <li><i class="fa fa-globe"> </i> <strong>Address:</strong> 4 Vesniana Str, Lviv, Ukraine</li>
-          <li><i class="fa fa-envelope-o"></i> <strong>Email:</strong> y.potupa@gmail.com</li>
-          <li><i class="fa fa-mobile"></i> <strong>Phone:</strong> +38 095 281 6678</li>
+          <li><i class="fa fa-globe"> </i> <strong>Address:</strong> 9 Hazova Str, Lviv, Ukraine</li>
+          <li><i class="fa fa-envelope-o"></i> <strong>E-mail:</strong> y.potupa@gmail.com</li>
+          <li><i class="fa fa-mobile"></i> <strong>Phone:</strong> +38(095)281-66-78 Eugene/PM</li>
           <li><i class="fa fa-skype"></i> <strong>Skype:</strong> yevheniy.potupa</li>
         </ul>
 
